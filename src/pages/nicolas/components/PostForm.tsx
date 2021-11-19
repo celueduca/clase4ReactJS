@@ -24,7 +24,7 @@ const PostForm = ({posts, setPosts}: Props): JSX.Element =>{
     };
     return (
         <div>
-            <div className="card">
+            <div className="card text-center  animate__animated animate__fadeInUp">
                 <div className="card-header" >
                     Create a Post
                 </div>

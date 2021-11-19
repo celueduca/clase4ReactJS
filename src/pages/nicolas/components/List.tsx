@@ -34,15 +34,17 @@ const ListPosts = ({ post, index, posts, setPosts }: Props): JSX.Element => {
             <div onClick={() => Likes(index)}>
               <i className="fas fa-thumbs-up btn btn-outline-secondary border-0"></i>
               <span>{post.likes}</span>
-            <button
-              className="btn btn-outline-secondary border-0"
-              onClick={() => deletePost(index)}
-            >
-              <i className="fas fa-trash"></i>
-              <span>Eliminar post</span>
-            </button>
             </div>
-            
+            <div>
+              <button
+                className="btn btn-outline-secondary border-0"
+                onClick={() => deletePost(index)}
+              >
+                <i className="fas fa-trash"></i>
+                <span>Eliminar post</span>
+              </button>
+            </div>
+
             <h3 className="card-title">{post.date}</h3>
           </div>
         </div>
