@@ -37,7 +37,7 @@ const App = (): JSX.Element => {
           </li>
           <li className="nav-item" onClick={() => subMenu(4)}>
             <a className={"nav-link" + (menu == 4 && " active")} href="#">
-              Juan Osoario
+              Juan Osorio
             </a>
           </li>
           <li className="nav-item" onClick={() => subMenu(5)}>
