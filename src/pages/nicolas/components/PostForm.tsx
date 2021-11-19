@@ -9,10 +9,11 @@ interface Props {
 const PostForm = ({posts, setPosts}: Props): JSX.Element =>{
     const [message, setMessage] = useState<string>("");
     const [url,setUrl]= useState<string>("");
-
+    const date = new Date();
+    const today=`${date.getDate()} / ${date.getMonth()+1} / ${date.getFullYear()} ` 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) =>{
         e.preventDefault();
-        Post(url,0,'19/11/2021',message);
+        Post(url,0,today,message);
         setMessage("");
         setUrl("")
     };

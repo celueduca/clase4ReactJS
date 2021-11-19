@@ -1,6 +1,6 @@
 export interface Post {
     url: string;
     likes: number;
-    date : string
+    date : string;
     message: string;
 }
