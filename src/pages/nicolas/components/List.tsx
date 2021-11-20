@@ -23,7 +23,7 @@ const ListPosts = ({ post, index, posts, setPosts }: Props): JSX.Element => {
   };
 
   return (
-    <div className="container d-flex justify-content-center align-items-center h-100">
+    <div className="container d-flex justify-content-center align-items-center h-100 space">
       <div className="row">
         <div className="card text-center bg-dark animate__animated animate__fadeInUp">
           <div className="overflow">
@@ -31,21 +31,25 @@ const ListPosts = ({ post, index, posts, setPosts }: Props): JSX.Element => {
           </div>
           <div className="card-body text-light">
             <h4 className="card-title">{post.message}</h4>
-            <div onClick={() => Likes(index)}>
+            <h3 className="card-title">{post.date}</h3>
+              <div className="card-footer text-muted">
+                <div className="row">
+
+            <div onClick={() => Likes(index)} >
               <i className="fas fa-thumbs-up btn btn-outline-secondary border-0"></i>
-              <span>{post.likes}</span>
+              <span  >{post.likes}</span>
             </div>
             <div>
               <button
-                className="btn btn-outline-secondary border-0"
+                className="btn btn-outline-secondary border-0 "
                 onClick={() => deletePost(index)}
               >
-                <i className="fas fa-trash"></i>
+                <i className="fas fa-trash "></i>
                 <span>Eliminar post</span>
               </button>
+              </div>
             </div>
-
-            <h3 className="card-title">{post.date}</h3>
+            </div>
           </div>
         </div>
       </div>
